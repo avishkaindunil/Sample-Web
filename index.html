@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>Skill Test - Avishka Indunil</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><img src="img/logo.png"></div>
+            <ul class="links">
+                <li><a href="#history">01.History</a></li>
+                <li><a href="#team">02.Team</a></li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="history" class="section-1">
+        <div class="navbar-2">
+            <div class="logo-2"><img src="img/logo.png"></div>
+            <div class="logo-3"><img src="img/mountains-text.png"></div>
+            <ul class="links-2">
+                <li><a class="a-2" href="#history">01.History</a></li>
+                <li><a class="a-2" href="#team">02.Team</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-2">
+        <img src="img/hero-2.jpg">
+    </section>
+
+    <section class="section-3">
+        <div class="main-carousel">
+            <div class="cell"><img src="img/image-1.jpg"></div>
+            <div class="cell"><img src="img/image-2.jpg"></div>
+            <div class="cell"><img src="img/image-1.jpg"></div>
+            <div class="cell"><img src="img/image-2.jpg"></div>
+            <div class="cell"><img src="img/image-1.jpg"></div>
+          </div>
+    </section>
+
+    <section id="team" class="section-4">
+        <img src="img/image-3.png">
+    </section>
+
+    <section class="section-5">
+        <div class="btn-box">
+            <button id="btn1" onclick="openMOUNTAIN1()">MOUNTAIN1</button>
+            <button id="btn2" onclick="openMOUNTAIN2()">MOUNTAIN2</button>
+        </div>
+        <div id="content1" class="content">
+            <img src="img/mountain1.jpg">
+        </div>
+        <div id="content2" class="content">
+            <img src="img/mountain1.jpg">
+        </div>
+    </section>
+
+    <section class="section-6">
+        <img src="img/footer.jpg">
+    </section>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script type="text/javascript">
+        $('.main-carousel').flickity({
+            // options
+            cellAlign: 'center',
+            wrapAround: true,
+            freeScroll: true
+        });
+    </script>
+    <script>
+        var content1 = document.getElementById("content1");
+        var content2 = document.getElementById("content2");
+        var btn1 = document.getElementById("btn1");
+        var btn1 = document.getElementById("btn1");
+
+        function openMOUNTAIN1(){
+            content1.style.transform = "translateX(0)";
+            content2.style.transform = "translateX(100%)";
+            btn1.style.color = "#b0b4be";
+            btn2.style.color = "#414f6b";
+        }
+
+        function openMOUNTAIN2(){
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(0)";
+            btn1.style.color = "#414f6b";
+            btn2.style.color = "#b0b4be";
+        }
+    </script>
+</body>
+</html>
